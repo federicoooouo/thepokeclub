@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>The Poke Club Tm</title>
-    <link rel="icon" type="image/png" href="./assets/iconfav.png" />
 </head>
 <body>
 <header>
@@ -28,8 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="./historia.html">Sobre Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="./form.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="./cart.html">Mi Pedido</a></li>
         
         
     </ul>
@@ -42,14 +40,14 @@
 <div class="container">
     <div class="row g-4">
 <div class="col-6 col-sm-6 col-lg-3">
-<div class="card h-100 text-center">
+<div class="card h-100 text-center"  data-id="1">
     <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
     <div class="card-body">
     <h5 class="card-title">Ensalada 1</h5>
     <!-- PRECIO -->
     <p class="card-price">$4.500</p>
     <p class="card-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perspiciatis magni porro. Ita(descrpcion de la ensalada)
+        Lorem ipsum dolor sit  Ita(descrpcion de la ensalada)
     </p>
     <!-- CANTIDAD -->
     <div class="card-quantity">
@@ -63,7 +61,7 @@
 </div>
 </div>
 <div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center">
+  <div class="card h-100 text-center" data-id="2"> 
     <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
     <div class="card-body">
       <h5 class="card-title">Ensalada 1</h5>
@@ -134,7 +132,7 @@
     </div>
   </div>
 </div>
-
+</section>
 <!--cards segunda  seccion  -->
 <section class="submenu-opciones py-5">
 <div class="container">
@@ -297,7 +295,7 @@
 </div>
   <hr class="my-3"">
     <div class="text-center">
-      <small>&copy; 2025 Fundación Ayudando Patitas. Todos los derechos reservados.</small>
+      <small>&copy; 2026 The Poke Club Tm . Todos los derechos reservados.</small>
     </div>
   </div>
 </footer>
@@ -306,5 +304,7 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j
 integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
 crossorigin="anonymous">
 </script>
+<script src="./javascript/productos.js"></script>
+<script src="./javascript/card.js"></script>
 </body>
 </html>
