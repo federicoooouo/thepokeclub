@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+.btn {
+    font-family: 'Roboto', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* navbar*/
+.navbar {
+    padding: 0.8rem 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .nav-link {
+    color: #000000;
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+.navbar .nav-link:hover {
+    color: #EDA35A;
+}
+.navbar .nav-link.active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #EDA35A;
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+.navbar-logo {
+    height: 80px;
+    width: auto;
+}
+.brand-name {
+  font-weight: 700;
+  font-family: 'Bebas Neue';
+  font-size: 1.5rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* navbar mediaquerys para probar el menu hamburguesa*/
+@media (max-width: 991px) {
+    .navbar-logo {
+        display: none; 
+    }
+    .brand-text {
+        display: inline-block; 
+    }
+    
+    .navbar-brand {
+        justify-content: center;
+        width: 100%;
+    }
+  
+    .navbar-toggler {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .navbar .container {
+        position: relative;
+    }
+}
+
+
+
+/* cards*/
+.submenu-opciones {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  gap: 20px;
+}
+
+.submenu-opciones .card {
+  border-radius: 30px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-basis: calc(25% - 20px);
+  text-align: center;
+  overflow: hidden; 
+}
+
+.submenu-opciones .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.submenu-opciones .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.submenu-opciones .card-body .btn {
+  margin-top: 10px;
+  background-color: #EDA35A; 
+  color: #000000; 
+  border-radius: 50px; 
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  border: none;
+}
+
+.submenu-opciones .card-body .btn:hover {
+  background-color: #ffffff; 
+  color: #EDA35A; 
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  border: 2px solid #000000;
+}
+
+
+/* precio */
+.card-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+/* cantidad */
+.card-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #EDA35A;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qty-value {
+  min-width: 20px;
+  font-weight: 600;
+}
+/* seccion acciones de la fundacion*/
+.acciones-fundacion {
+  background: linear-gradient(
+    to bottom,
+    #EDA35A 0%,      
+    #EDA35A 25%,     
+    #fff 100%       
+  );
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+.acciones-fundacion .accion-item {
+  margin-bottom: 40px; 
+  color: #000000ff;
+
+}
+
+.acciones-fundacion .accion-item .icono-accion {
+  width: 80px; 
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; 
+  filter: brightness(0) invert(1);
+}
+
+.acciones-fundacion .accion-item h4 {
+  font-weight: 600;
+  margin-bottom: 15px; 
+  color: #000000;
+}
+
+.acciones-fundacion .accion-item p {
+  max-width: 300px;
+  margin: 0 auto 20px;
+  color: #000000;
+}
+
+.acciones-fundacion .btn {
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.acciones-fundacion .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: none;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+
+
+/* algunas mediaquerys para mobile*/
+@media (max-width: 575px) {
+  .newsletter-input {
+    max-width: 90%;
+  }
+}
+@media (min-width: 576px) {
+  .newsletter form > div {
+    max-width: 400px;
+  }
+}
+@media (min-width: 576px) {
+  .newsletter form > div {
+    max-width: 400px;
+  }
+}
+@media (max-width: 991px) {
+  .submenu-opciones .card {
+    flex-basis: calc(50% - 15px); 
+  }
+}
+
+@media (max-width: 575px) {
+  .submenu-opciones .card-img-top {
+    height: 150px; 
+  }
+  .submenu-opciones .card-body h5 {
+    font-size: 1rem;
+  }
+  .submenu-opciones .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+/* el famisisimo footer*/
+.footer {
+  background-color: #000000; 
+  color: #ffffff;
+  padding: 40px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon i {
+  color: #EDA35A; 
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-icon i:hover {
+  transform: translateY(-5px);
+  color: #FFC107; 
+}
+
+.footer-icon p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.footer hr {
+  margin: 1rem 0;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.footer small {
+  font-size: 0.8rem;
+  color: #C1C1C1;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-icon i {
+    font-size: 2rem;
+  }
+}
