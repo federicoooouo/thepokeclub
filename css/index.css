@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap');
 
+.brand-name {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: none; /* no usar uppercase */
+    color: #000;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -25,42 +35,96 @@ img {
     max-width: 1200px;
     margin: 0 auto;
 }
-/* navbar*/
-.navbar {
-    padding: 0.8rem 2rem;
-    font-family: 'Poppins', sans-serif;
-}
-.navbar .nav-link {
-    color: #000000;
-    font-weight: 600;
-    transition: color 0.3s, border-bottom 0.3s;
-    position: relative;
-}
-.navbar .nav-link:hover {
-    color: #EDA35A;
-}
-.navbar .nav-link.active::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: #EDA35A;
-    width: 100%;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    border-radius: 2px;
-}
+/* navbar */
+/* -------- LOGO -------- */
 .navbar-logo {
-    height: 80px;
+    height: 80px;       /* tamaño desktop */
     width: auto;
+    max-width: 100%;    /* evita que se desborde */
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
-.brand-name {
-  font-weight: 700;
-  font-family: 'Bebas Neue';
-  font-size: 1.5rem;
-  color: #000;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+
+.navbar .nav-link {
+    font-family: 'Roboto', sans-serif; /* misma fuente que los títulos */
+    font-weight: 600;                   /* opcional, si querés que sea más destacada */
+}
+
+
+
+/* -------- NAVBAR GENERAL -------- */
+.navbar .container {
+    display: flex;
+    flex-direction: row;           /* siempre horizontal */
+    justify-content: space-between; /* logo izquierda, links derecha */
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Links: lado derecho */
+.navbar .w-100.d-flex {
+    justify-content: flex-end;
+    gap: 1.5rem; /* espacio entre links */
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* Tablets (768px – 991px) */
+@media (max-width: 991px) {
+    .navbar-logo {
+        height: 65px; /* logo más pequeño */
+    }
+
+    .navbar .container {
+        padding: 0 0.8rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 1rem;
+    }
+}
+
+/* Móviles grandes (576px – 767px) */
+@media (max-width: 767px) {
+    .navbar-logo {
+        height: 55px;
+    }
+
+    .navbar .container {
+        padding: 0 0.5rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 0.8rem;
+    }
+}
+
+/* Móviles pequeños (<576px) */
+@media (max-width: 575px) {
+    .navbar-logo {
+        height: 50px;
+    }
+
+    .navbar .container {
+        padding: 0 0.3rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 0.5rem;
+    }
+}
+
+
+
+
+
+
+/* posicionar el contador de forma visible */
+#contador-carrito {
+  font-size: 0.75rem;
+  padding: 0.3em 0.5em;
+  margin-left: 5px;
 }
 
 
@@ -81,31 +145,6 @@ img {
   background-color: #fff;
   color: #EDA35A;
   border: 2px solid #000;
-}
-
-
-/* navbar mediaquerys para probar el menu hamburguesa*/
-@media (max-width: 991px) {
-    .navbar-logo {
-        display: none; 
-    }
-    .brand-text {
-        display: inline-block; 
-    }
-    
-    .navbar-brand {
-        justify-content: center;
-        width: 100%;
-    }
-  
-    .navbar-toggler {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .navbar .container {
-        position: relative;
-    }
 }
 
 
