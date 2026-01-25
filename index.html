@@ -14,26 +14,44 @@
 </head>
 <body>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-3 border-warning">
-    <div class="container">
-      <a class="navbar-brand d-flex flex-column align-items-center text-center" href="./index.html">
-          <span class="brand-name"> The Poke Club Tm</span>
-        </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-3 border-warning">
+  <div class="container">
+    <a class="navbar-brand d-flex flex-column align-items-center text-center" href="./index.html">
+      <span class="brand-name"> The Poke Club Tm</span>
+    </a>
     <!-- menu hamburguesa -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="./cart.html">Mi Pedido</a></li>
-        
-        
-    </ul>
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="./cart.html">Mi Pedido</a>
+          <!-- Contador -->
+          <span id="contador-carrito" 
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </li>
+      </ul>
     </div>
-</div>
+  </div>
 </nav>
+
+<!-- Toast container (al final del body, fuera de main) -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="toast-carrito" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Producto agregado al carrito
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
 </header>
 <!--cards primer seccion  -->
 <section class="submenu-opciones py-5">
@@ -56,7 +74,7 @@
         <button class="qty-btn">+</button>
     </div>
 
-    <a href="" class="btn btn-primary">Ver más</a>
+    <a href="" class="btn btn-primary">Agregar</a>
     </div>
 </div>
 </div>
@@ -80,7 +98,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -104,7 +122,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -128,7 +146,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -154,7 +172,7 @@
         <button class="qty-btn">+</button>
     </div>
 
-    <a href="" class="btn btn-primary">Ver más</a>
+    <a href="" class="btn btn-primary">Agregar</a>
     </div>
 </div>
 </div>
@@ -178,7 +196,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -202,7 +220,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -226,7 +244,7 @@
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Ver más</a>
+      <a href="#" class="btn btn-primary">Agregar</a>
     </div>
   </div>
 </div>
@@ -270,13 +288,13 @@
   <div class="container">
     <div class="row justify-content-around text-center">
     <div class="col-6 col-md-3 mb-4 mb-md-0 footer-icon">
-  <a href="https://www.gmail.com" target="_blank">
+  <a href="./404.html" target="_blank">
     <i class="bi bi-envelope-fill fs-1 mb-2"></i>
   </a>
   <p>Envíanos un email</p>
 </div>
 <div class="col-6 col-md-3 mb-4 mb-md-0 footer-icon">
-  <a href="https://www.facebook.com" target="_blank">
+  <a href="./404.html" target="_blank">
     <i class="bi bi-facebook fs-1 mb-2"></i>
   </a>
   <p>Seguinos en Facebook</p>

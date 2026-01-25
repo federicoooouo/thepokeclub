@@ -28,7 +28,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="./404.html">Mi Pedido</a></li>
+        <li class="nav-item position-relative">
+  <a class="nav-link" href="./cart.html">
+    Mi Pedido
+    <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
+    </span>
+  </a>
+</li>
 
         
         
@@ -78,7 +85,16 @@
 
 </main>
 
-
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="toast-carrito" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Producto agregado al carrito
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
 
 
 
