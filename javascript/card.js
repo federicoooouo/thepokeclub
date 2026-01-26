@@ -61,7 +61,7 @@ const addButtons = document.querySelectorAll('.card .btn-primary');
 
 addButtons.forEach(button => {
   button.addEventListener('click', (e) => {
-    e.preventDefault(); // evita que el link "#" recargue
+    e.preventDefault();
 
     const card = button.closest('.card');
     const productId = parseInt(card.dataset.id);
@@ -85,8 +85,7 @@ addButtons.forEach(button => {
 
     guardarCarrito(carrito);
     actualizarContador();
-    renderizarCarrito(); // actualiza sección "Mi pedido" si estamos en cart.html
-    console.log('Carrito actualizado:', carrito);
+    renderizarCarrito();
   });
 });
 
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderizarCarrito() {
   const carrito = obtenerCarrito();
-  const contenedor = document.querySelector('main section:first-of-type .card'); // sección "Mi pedido"
+  const contenedor = document.querySelector('main section:first-of-type .card');
   if (!contenedor) return;
 
   contenedor.querySelectorAll('.item-carrito').forEach(e => e.remove());
@@ -124,7 +123,14 @@ function renderizarCarrito() {
     if (!producto) return;
 
     const div = document.createElement('div');
-    div.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'border-bottom', 'py-3', 'item-carrito');
+    div.classList.add(
+      'd-flex',
+      'justify-content-between',
+      'align-items-center',
+      'border-bottom',
+      'py-3',
+      'item-carrito'
+    );
 
     div.innerHTML = `
       <div>
@@ -143,6 +149,28 @@ function renderizarCarrito() {
 
     contenedor.appendChild(div);
   });
+
+  actualizarTotal(); // ✅ TOTAL
+}
+
+// ===============================
+// CALCULAR Y MOSTRAR TOTAL
+// ===============================
+
+function actualizarTotal() {
+  const carrito = obtenerCarrito();
+  const totalContainer = document.getElementById('total-carrito');
+  if (!totalContainer) return;
+
+  let total = 0;
+
+  carrito.forEach(item => {
+    const producto = productos.find(p => p.id === item.id);
+    if (!producto) return;
+    total += producto.precio * item.cantidad;
+  });
+
+  totalContainer.textContent = `Total: $${total.toLocaleString('es-AR')}`;
 }
 
 // ===============================
@@ -159,29 +187,40 @@ function eliminarDelCarrito(productId) {
   if (card) card.querySelector('.qty-value').textContent = 0;
 
   actualizarContador();
-  console.log('Item eliminado. Carrito actual:', carrito);
 }
 
+// ===============================
 // BOTÓN WHATSAPP EN CART.HTML
+// ===============================
+
 const btnWhatsAppCart = document.querySelector('section.text-center button');
 if (btnWhatsAppCart) {
   btnWhatsAppCart.addEventListener('click', () => {
     const carrito = obtenerCarrito();
     if (carrito.length === 0) {
-      mostrarToast('El carrito está vacío'); // usamos toast en lugar de alert
+      mostrarToast('El carrito está vacío');
       return;
     }
 
     let mensaje = 'Hola! Quiero hacer el siguiente pedido:%0A';
+    let totalPedido = 0;
+
     carrito.forEach(item => {
       const producto = productos.find(p => p.id === item.id);
       if (!producto) return;
-      mensaje += `- ${producto.nombre} x${item.cantidad}%0A`;
+
+      const subtotal = producto.precio * item.cantidad;
+      totalPedido += subtotal;
+
+      mensaje += `- ${producto.nombre} x${item.cantidad} ($${subtotal})%0A`;
     });
+
+    mensaje += `%0A🧾 Total del pedido: $${totalPedido}`;
 
     const direccion = document.querySelector('input.form-control')?.value;
     const notas = document.querySelector('textarea.form-control')?.value;
-    if (direccion) mensaje += `%0ADirección: ${direccion}`;
+
+    if (direccion) mensaje += `%0A%0ADirección: ${direccion}`;
     if (notas) mensaje += `%0ANotas: ${notas}`;
 
     const url = `https://wa.me/542645768107?text=${mensaje}`;

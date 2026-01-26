@@ -4,12 +4,9 @@
     font-family: 'Sawarabi Gothic', sans-serif;
     font-size: 2.2rem;
     letter-spacing: 1px;
-    text-transform: none; /* no usar uppercase */
+    text-transform: none; 
     color: #000;
 }
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -36,100 +33,38 @@ img {
     margin: 0 auto;
 }
 /* navbar */
-/* -------- LOGO -------- */
 .navbar-logo {
-    height: 80px;       /* tamaño desktop */
+    height: 80px;      
     width: auto;
-    max-width: 100%;    /* evita que se desborde */
+    max-width: 100%;    
     object-fit: contain;
     transition: all 0.3s ease;
 }
-
 .navbar .nav-link {
-    font-family: 'Roboto', sans-serif; /* misma fuente que los títulos */
-    font-weight: 600;                   /* opcional, si querés que sea más destacada */
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600;                  
 }
-
-
-
-/* -------- NAVBAR GENERAL -------- */
 .navbar .container {
     display: flex;
-    flex-direction: row;           /* siempre horizontal */
-    justify-content: space-between; /* logo izquierda, links derecha */
+    flex-direction: row;           
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     padding: 0 1rem;
 }
 
-/* Links: lado derecho */
 .navbar .w-100.d-flex {
     justify-content: flex-end;
-    gap: 1.5rem; /* espacio entre links */
+    gap: 1.5rem; 
 }
 
-/* -------- MEDIA QUERIES -------- */
-
-/* Tablets (768px – 991px) */
-@media (max-width: 991px) {
-    .navbar-logo {
-        height: 65px; /* logo más pequeño */
-    }
-
-    .navbar .container {
-        padding: 0 0.8rem;
-    }
-
-    .navbar .w-100.d-flex {
-        gap: 1rem;
-    }
-}
-
-/* Móviles grandes (576px – 767px) */
-@media (max-width: 767px) {
-    .navbar-logo {
-        height: 55px;
-    }
-
-    .navbar .container {
-        padding: 0 0.5rem;
-    }
-
-    .navbar .w-100.d-flex {
-        gap: 0.8rem;
-    }
-}
-
-/* Móviles pequeños (<576px) */
-@media (max-width: 575px) {
-    .navbar-logo {
-        height: 50px;
-    }
-
-    .navbar .container {
-        padding: 0 0.3rem;
-    }
-
-    .navbar .w-100.d-flex {
-        gap: 0.5rem;
-    }
-}
-
-
-
-
-
-
-/* posicionar el contador de forma visible */
 #contador-carrito {
   font-size: 0.75rem;
   padding: 0.3em 0.5em;
   margin-left: 5px;
 }
 
-
 /*CARRITO*/
-
 .card {
   border-radius: 30px;
 }
@@ -147,9 +82,16 @@ img {
   border: 2px solid #000;
 }
 
-
-
 /* cards*/
+
+.titulo-seccion {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
 .submenu-opciones {
   display: flex;
   justify-content: space-between;
@@ -199,7 +141,6 @@ img {
   border: 2px solid #000000;
 }
 
-
 /* precio */
 .card-price {
   font-size: 1.2rem;
@@ -232,76 +173,7 @@ img {
   min-width: 20px;
   font-weight: 600;
 }
-/* seccion acciones de la fundacion*/
-.acciones-fundacion {
-  background: linear-gradient(
-    to bottom,
-    #EDA35A 0%,      
-    #EDA35A 25%,     
-    #fff 100%       
-  );
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-.acciones-fundacion .accion-item {
-  margin-bottom: 40px; 
-  color: #000000ff;
 
-}
-
-.acciones-fundacion .accion-item .icono-accion {
-  width: 80px; 
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; 
-  filter: brightness(0) invert(1);
-}
-
-.acciones-fundacion .accion-item h4 {
-  font-weight: 600;
-  margin-bottom: 15px; 
-  color: #000000;
-}
-
-.acciones-fundacion .accion-item p {
-  max-width: 300px;
-  margin: 0 auto 20px;
-  color: #000000;
-}
-
-.acciones-fundacion .btn {
-  font-weight: 600;
-  padding: 8px 18px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.acciones-fundacion .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: none;
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #000000;
-}
-
-
-
-/* algunas mediaquerys para mobile*/
-@media (max-width: 575px) {
-  .newsletter-input {
-    max-width: 90%;
-  }
-}
-@media (min-width: 576px) {
-  .newsletter form > div {
-    max-width: 400px;
-  }
-}
-@media (min-width: 576px) {
-  .newsletter form > div {
-    max-width: 400px;
-  }
-}
 @media (max-width: 991px) {
   .submenu-opciones .card {
     flex-basis: calc(50% - 15px); 
@@ -318,6 +190,51 @@ img {
   .submenu-opciones .card-body p {
     font-size: 0.85rem;
   }
+}
+
+/* Tablets (768px – 991px) */
+@media (max-width: 991px) {
+    .navbar-logo {
+        height: 65px; /* logo más pequeño */
+    }
+
+    .navbar .container {
+        padding: 0 0.8rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 1rem;
+    }
+}
+
+/* Móviles grandes (576px – 767px) */
+@media (max-width: 767px) {
+    .navbar-logo {
+        height: 55px;
+    }
+
+    .navbar .container {
+        padding: 0 0.5rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 0.8rem;
+    }
+}
+
+/* Móviles pequeños (<576px) */
+@media (max-width: 575px) {
+    .navbar-logo {
+        height: 50px;
+    }
+
+    .navbar .container {
+        padding: 0 0.3rem;
+    }
+
+    .navbar .w-100.d-flex {
+        gap: 0.5rem;
+    }
 }
 
 /* el famisisimo footer*/
@@ -372,3 +289,4 @@ img {
     font-size: 2rem;
   }
 }
+
