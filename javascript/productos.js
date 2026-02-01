@@ -98,6 +98,14 @@ const productos = [
     precio: 1000,
     imagen: "./assets/img/cocazero.jpg"
   },
+
+    {
+    id: 14,
+    nombre: "Agua mineral",
+    descripcion: "Adicional de agua mineral",
+    precio: 1000,
+    imagen: "./assets/img/cocazero.jpg"
+  },
 ];
 
 

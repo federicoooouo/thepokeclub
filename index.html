@@ -10,31 +10,28 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>The Poke Club Tm</title>
+    <title> Poke House Club Tm</title>
 </head>
 <body>
 <header>
+<!-- Navbar, logo, links, faltaria meterle un favicon -->
 <nav class="navbar navbar-light bg-white border-bottom border-3 border-warning flex-column py-3">
   <div class="container d-flex flex-column align-items-center">
-    <!-- LOGO / NOMBRE -->
-  <a class="navbar-brand d-flex flex-column align-items-center text-center" href="./index.html">
+    <a class="navbar-brand d-flex flex-column align-items-center text-center" href="./index.html">
     <img src="./assets/img/navbar.jpeg" alt="The Poke Club TM" class="navbar-logo">
-</a>
-
-    <!-- LINKS ABAJO -->
-    <div class="w-100 d-flex justify-content-between px-4">
+    </a>
+  <div class="w-100 d-flex justify-content-between px-4">
       <a class="nav-link border-bottom border-3 border-warning active" href="./index.html">Inicio</a>
-
-      <div class="position-relative">
-        <a class="nav-link" href="./cart.html">Mi Pedido</a>
-        <!-- CONTADOR -->
-        <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-      </div>
+  <div class="position-relative">
+      <a class="nav-link" href="./cart.html">Mi Pedido</a>
+      <!-- CONTADOR -->
+      <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+  </div>
     </div>
   </div>
 </nav>
 
-<!-- Toast container (al final del body, fuera de main) -->
+<!-- Alertas de prodcuto agregado/NO ESTA FUNCIONANDO-->
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="toast-carrito" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
@@ -46,342 +43,253 @@
   </div>
 </div>
 </header>
-<!-- SECCIÓN ENSALADAS -->
+
+<!-- SECCION ENSALADAS -->
 <section class="submenu-opciones py-5">
   <div class="container">
-
     <div class="menu-title">
       <span class="triangle"></span>
       <h2 class="titulo-seccion">Ensaladas</h2>
     </div>
-
-    <div class="row g-4">
-
-      <div class="col-6 col-sm-6 col-lg-3">
-        <div class="card h-100 text-center" data-id="1">
-          <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Poke Teriyaki Fresh</h5>
-            <p class="card-price">$8.500</p>
-            <p class="card-text">
-              Pollo teriyaki, Arros de sushi, Zanahoria,Lechuga, Repollo morado,Tomates cherrys, Semillas de sesamo
-            </p>
-            <div class="card-quantity">
-              <button class="qty-btn">−</button>
-              <span class="qty-value">0</span>
-              <button class="qty-btn">+</button>
-            </div>
-            <a href="" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
+<div class="row g-4">
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="card h-100 text-center" data-id="1">
+      <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Poke Teriyaki Fresh</h5>
+        <p class="card-price">$8.500</p>
+        <p class="card-text">
+          Pollo teriyaki, Arroz de sushi, Zanahoria, Lechuga,
+          Repollo morado, Tomates cherrys, Semillas de sésamo
+        </p>
+        <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalEnsalada1">
+          Personalizar
+        </button>
       </div>
-
-      <div class="col-6 col-sm-6 col-lg-3">
-        <div class="card h-100 text-center" data-id="2">
-          <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Poke Cream</h5>
-            <p class="card-price">$8.500</p>
-            <p class="card-text">
-              Pollo grillado, arroz de sushi, palta, lechuga, cebolla morada encurtida, tomates cherrys, semillas de sesamo.
-            </p>
-            <div class="card-quantity">
-              <button class="qty-btn">−</button>
-              <span class="qty-value">0</span>
-              <button class="qty-btn">+</button>
-            </div>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-lg-3">
-        <div class="card h-100 text-center" data-id="3">
-          <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Poke Crunchy</h5>
-            <p class="card-price">$8.500</p>
-            <p class="card-text">
-              Pollo crujiente, arroz de sushi, Palta, Queso crema, repollo morado, zanahoria, cebolla de verdeo, tomates cherrys
-            </p>
-            <div class="card-quantity">
-              <button class="qty-btn">−</button>
-              <span class="qty-value">0</span>
-              <button class="qty-btn">+</button>
-            </div>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-lg-3">
-        <div class="card h-100 text-center" data-id="4">
-          <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Poke Veggie</h5>
-            <p class="card-price">$7.000</p>
-            <p class="card-text">
-              Arroz de sushi, Palta,Zanahoria,repollo morado, Cebolla de verdo,Tomates cherrys, Choclo, Queso crema
-            </p>
-            <div class="card-quantity">
-              <button class="qty-btn">−</button>
-              <span class="qty-value">0</span>
-              <button class="qty-btn">+</button>
-            </div>
-            <a href="#" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-lg-3">
-        <div class="card h-100 text-center" data-id="5">
-          <img src="./assets/img/salad1.jpg" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Poke Vegan</h5>
-            <p class="card-price">$7.000</p>
-            <p class="card-text">
-              Arroz de sushi, Palta,Garbansos,Cebolla morada encurtida,Lechuga, Tomates Cherrys, Repollo morado.Zanahoria.Semillas de sesamo
-            </p>
-            <div class="card-quantity">
-              <button class="qty-btn">−</button>
-              <span class="qty-value">0</span>
-              <button class="qty-btn">+</button>
-            </div>
-            <a href="" class="btn btn-primary">Agregar</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
-</section>
 
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="card h-100 text-center" data-id="2">
+      <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Poke Cream</h5>
+        <p class="card-price">$8.500</p>
+        <p class="card-text">
+            "Pollo grillado, arroz de sushi,\npalta,lechuga, cebolla morada encurtida,\nTomates cherrys, semillas de sesamo.",
+        </p>
+        <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalEnsalada1">
+          Personalizar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="card h-100 text-center" data-id="3">
+      <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Poke Crunchy</h5>
+        <p class="card-price">$8.500</p>
+        <p class="card-text">
+          "Pollo crujiente, arroz de sushi,Palta, Queso crema, repollo morado, zanahoria, cebolla de verdeo, tomates cherrys",
+        </p>
+        <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalEnsalada1">
+          Personalizar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="card h-100 text-center" data-id="4">
+      <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Poke Veggie</h5>
+        <p class="card-price">$7.000</p>
+        <p class="card-text">
+          "Arroz de sushi, Palta,Zanahoria,repollo\nmorado, Cebolla de verdo,Tomates\ncherrys, Choclo, Queso crema",
+        </p>
+        <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalEnsalada1">
+          Personalizar
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-6 col-md-6 col-lg-3">
+    <div class="card h-100 text-center" data-id="5">
+      <img src="./assets/img/salad2.jpg" class="card-img-top" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Poke Vegan</h5>
+        <p class="card-price">$7.000</p>
+        <p class="card-text">
+        "Arroz de sushi, Palta,Garbansos,Cebolla\nmorada encurtida,Lechuga, Tomates\nCherrys, Repollo morado.Zanahoria.Semillas\nde sesamo",
+        </p>
+        <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#modalEnsalada1">
+          Personalizar
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-<!-- SECCIÓN ADICIONALES -->
+</section>
+<!-- SECCIÓN BEBIDAS -->
 <section class="submenu-opciones py-5">
   <div class="container">
-
     <div class="menu-title">
       <span class="triangle"></span>
-      <h2 class="titulo-seccion">Adicionales</h2>
-    </div>
-
-      <div class="row g-4">
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="8">
-    <img src="./assets/img/palta.jpg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Adicional Palta</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
-
-      <p class="card-text">
-        Adicional de palta 
-      </p>
-
-      <!-- CANTIDAD -->
-      <div class="card-quantity">
-        <button class="qty-btn">−</button>
-        <span class="qty-value">0</span>
-        <button class="qty-btn">+</button>
-      </div>
-
-      <a href="#" class="btn btn-primary">Agregar</a>
-    </div>
-  </div>
-</div>
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="9">
-    <img src="./assets/img/palta.jpg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Adicional Cebolla Emcurtida</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
-
-      <p class="card-text">
-        Adicional de cebolla encurtida
-      </p>
-
-      <!-- CANTIDAD -->
-      <div class="card-quantity">
-        <button class="qty-btn">−</button>
-        <span class="qty-value">0</span>
-        <button class="qty-btn">+</button>
-      </div>
-
-      <a href="#" class="btn btn-primary">Agregar</a>
-    </div>
-  </div>
-</div>
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="10">
-    <img src="./assets/img/palta.jpg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Adicional Queso Crema</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
-
-      <p class="card-text">
-        Adicional de queso crema
-      </p>
-
-      <!-- CANTIDAD -->
-      <div class="card-quantity">
-        <button class="qty-btn">−</button>
-        <span class="qty-value">0</span>
-        <button class="qty-btn">+</button>
-      </div>
-
-      <a href="#" class="btn btn-primary">Agregar</a>
-    </div>
-  </div>
-</div>
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="11">
-    <img src="./assets/img/palta.jpg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Adicional Salsa Sriracha</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
-
-      <p class="card-text">
-        Adicional de salsa sriracha
-      </p>
-
-      <!-- CANTIDAD -->
-      <div class="card-quantity">
-        <button class="qty-btn">−</button>
-        <span class="qty-value">0</span>
-        <button class="qty-btn">+</button>
-      </div>
-
-      <a href="#" class="btn btn-primary">Agregar</a>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN SALSAS Y BEBIDAS -->
-<section class="submenu-opciones py-5">
-  <div class="container">
-
-    <div class="menu-title">
-      <span class="triangle"></span>
-      <h2 class="titulo-seccion">Salsas y Bebidas</h2>
+      <h2 class="titulo-seccion">BEBIDAS</h2>
     </div>
 <div class="row g-4">
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="6">
-    <img src="./assets/img/soya.jpeg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Salsa de Soja</h5>
 
-      <!-- PRECIO -->
-      <p class="card-price">$0</p>
+<div class="col-6 col-md-6 col-lg-3">
+  <div class="card h-100 text-center producto-bebida" data-id="12">
+
+    <img src="./assets/img/cocacomun.jpg" class="card-img-top" alt="Coca Cola común">
+
+    <div class="card-body">
+      <h5 class="card-title">Coca Cola común</h5>
+      <p class="card-price">$1.000</p>
 
       <p class="card-text">
-         Adicional de salsa de soja
+        Coca Cola común 500ml
       </p>
 
       <!-- CANTIDAD -->
-      <div class="card-quantity">
+      <div class="card-quantity mb-3">
         <button class="qty-btn">−</button>
         <span class="qty-value">0</span>
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Agregar</a>
+      <!-- AGREGAR -->
+      <button class="btn btn-primary btn-agregar-bebida w-100">
+        Agregar
+      </button>
     </div>
+
   </div>
 </div>
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="7">
-    <img src="./assets/img/buenosaires.jpeg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">Salsa Buenos Aires</h5>
 
-      <!-- PRECIO -->
-      <p class="card-price">$0</p>
+
+ <div class="col-6 col-md-6 col-lg-3">
+  <div class="card h-100 text-center producto-bebida" data-id="13">
+
+    <img src="./assets/img/cocazero.jpg" class="card-img-top" alt="Coca Cola zero">
+
+    <div class="card-body">
+      <h5 class="card-title">Coca Cola zero</h5>
+      <p class="card-price">$1.000</p>
 
       <p class="card-text">
-         Adicional de salsa Buenos Aires
+        Coca Cola zero 500ml
       </p>
 
       <!-- CANTIDAD -->
-      <div class="card-quantity">
+      <div class="card-quantity mb-3">
         <button class="qty-btn">−</button>
         <span class="qty-value">0</span>
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Agregar</a>
+      <!-- AGREGAR -->
+      <button class="btn btn-primary btn-agregar-bebida w-100">
+        Agregar
+      </button>
     </div>
+
   </div>
 </div>
+<div class="col-6 col-md-6 col-lg-3">
+  <div class="card h-100 text-center producto-bebida" data-id="14">
 
+    <img src="./assets/img/cocacomun.jpg" class="card-img-top" alt="Coca Cola común">
 
-
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="12">
-    <img src="./assets/img/cocacomun.jpg" class="card-img-top" alt="Card 1">
     <div class="card-body">
-      <h5 class="card-title">COCA COMUN</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
+      <h5 class="card-title">Agua Mineral</h5>
+      <p class="card-price">$1.000</p>
 
       <p class="card-text">
-        Coca Cola comun
+        Agua Mineral 500ml
       </p>
 
       <!-- CANTIDAD -->
-      <div class="card-quantity">
+      <div class="card-quantity mb-3">
         <button class="qty-btn">−</button>
         <span class="qty-value">0</span>
         <button class="qty-btn">+</button>
       </div>
 
-      <a href="#" class="btn btn-primary">Agregar</a>
+      <!-- AGREGAR -->
+      <button class="btn btn-primary btn-agregar-bebida w-100">
+        Agregar
+      </button>
     </div>
+
   </div>
 </div>
-
-<div class="col-6 col-sm-6 col-lg-3">
-  <div class="card h-100 text-center" data-id="13">
-    <img src="./assets/img/cocazero.jpg" class="card-img-top" alt="Card 1">
-    <div class="card-body">
-      <h5 class="card-title">COCA ZERO</h5>
-
-      <!-- PRECIO -->
-      <p class="card-price">$1000</p>
-
-      <p class="card-text">
-        Coca Cola zero
-      </p>
-
-      <!-- CANTIDAD -->
-      <div class="card-quantity">
-        <button class="qty-btn">−</button>
-        <span class="qty-value">0</span>
-        <button class="qty-btn">+</button>
-      </div>
-
-      <a href="#" class="btn btn-primary">Agregar</a>
-    </div>
-  </div>
 </div>
-
-    </div>
-  </div>
+</div>
 </section>
 
+
+<div class="modal fade" id="modalEnsalada1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" data-id="">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- BASE -->
+        <div class="mb-3">
+          <strong>Base</strong>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="base-modal-1" checked>
+            <label class="form-check-label">Sin base</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="base-modal-1">
+            <label class="form-check-label">Arroz</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="base-modal-1">
+            <label class="form-check-label">Mix de verdes</label>
+          </div>
+        </div>
+        
+        <hr>
+        <!-- ADICIONALES -->
+        <div class="mb-3">
+          <strong>Adicionales</strong>
+          <div id="lista-adicionales-modal">
+            <!-- Renderizamos los Adicionales aca -->
+          </div>
+        </div>
+        <hr>
+        <!-- CANTIDAD -->
+        <div class="card-quantity mb-3">
+          <button class="qty-btn">−</button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn">+</button>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <div class="text-end fw-bold fs-5">
+          Total: $<span id="total-modal">0</span>
+        </div>
+          <button class="btn btn-primary w-100 btn-agregar-modal">
+          Agregar al carrito
+          </button>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <!-- el famosisimo footer-->
 <footer class="footer bg-dark text-white py-4">
