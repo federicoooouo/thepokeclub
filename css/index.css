@@ -63,6 +63,11 @@ img {
   padding: 0.3em 0.5em;
   margin-left: 5px;
 }
+/* LINEA INFERIOR DE LA NAVBAR */
+.navbar {
+  border-bottom: 3px solid #C40C0C !important;
+  box-shadow: none !important;
+}
 
 /*CARRITO*/
 .card {
@@ -70,15 +75,15 @@ img {
 }
 
 .btn-primary {
-  background-color: #EDA35A;
-  color: #000;
+  background-color: #5A7ACD;
+  color: #ffffff;
   border: none;
   font-weight: 600;
 }
 
 .btn-primary:hover {
   background-color: #fff;
-  color: #EDA35A;
+  color: #10100f;
   border: 2px solid #000;
 }
 
@@ -123,7 +128,7 @@ img {
 
 .submenu-opciones .card-body .btn {
   margin-top: 10px;
-  background-color: #EDA35A; 
+  background-color: #5A7ACD; 
   color: #000000; 
   border-radius: 50px; 
   font-weight: 600;
@@ -134,7 +139,7 @@ img {
 
 .submenu-opciones .card-body .btn:hover {
   background-color: #ffffff; 
-  color: #EDA35A; 
+  color: #030302; 
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.15);
   border: 2px solid #000000;
@@ -161,8 +166,8 @@ img {
   height: 32px;
   border-radius: 50%;
   border: none;
-  background-color: #EDA35A;
-  color: #000;
+  background-color: #0a0908;
+  color: #fffdfd;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
@@ -235,10 +240,61 @@ img {
         gap: 0.5rem;
     }
 }
+.floating-icons {
+  position: fixed;
+  right: 16px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* WhatsApp */
+.floating-btn.whatsapp {
+  background-color: #25D366;
+}
+
+/* Carrito */
+.floating-btn.cart {
+  background-color: #111;
+}
+
+/* contador carrito */
+#floating-cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ff3b30;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* el famisisimo footer*/
 .footer {
-  background-color: #000000; 
+  background-color: #1a181819; 
   color: #ffffff;
   padding: 40px 0;
   font-family: 'Poppins', sans-serif;
@@ -252,13 +308,13 @@ img {
 }
 
 .footer-icon i {
-  color: #EDA35A; 
+  color: #C40C0C; 
   transition: transform 0.3s, color 0.3s;
 }
 
 .footer-icon i:hover {
   transform: translateY(-5px);
-  color: #FFC107; 
+  color: #e2e2e2; 
 }
 
 .footer-icon p {
@@ -289,3 +345,60 @@ img {
   }
 }
 
+/* MOBILE MUY CHICO – FIX CARDS (320px–390px) */
+@media (max-width: 390px) {
+
+  .submenu-opciones .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu-opciones .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .submenu-opciones .card-text {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .submenu-opciones .card-body .btn {
+    margin-top: auto;   /* CLAVE */
+    margin-bottom: 0;   /* elimina el mb-3 visual */
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .submenu-opciones .card-img-top {
+    height: 130px;
+  }
+}
+
+/* iPhone 12 / 12 Pro – 390px */
+@media (min-width: 381px) and (max-width: 414px) {
+
+  .submenu-opciones .card-body {
+    padding: 0.85rem;
+  }
+
+  .submenu-opciones .card-title {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .submenu-opciones .card-text {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
+
+  .submenu-opciones .card-body .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .submenu-opciones .card-img-top {
+    height: 140px;
+  }
+}

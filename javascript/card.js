@@ -1,31 +1,27 @@
 // ===============================
-// UTILIDADES DE CARRITO
+// utilities de manejo del carrito
 // ===============================
-
 function obtenerCarrito() {
   const carrito = localStorage.getItem('carrito');
   return carrito ? JSON.parse(carrito) : [];
 }
-
 function guardarCarrito(carrito) {
   localStorage.setItem('carrito', JSON.stringify(carrito));
 }
-
 // ===============================
-// CONTADOR EN LA NAVBAR
+// contador de navbar
 // ===============================
-
 function actualizarContador() {
   const carrito = obtenerCarrito();
   const total = carrito.reduce((acc, item) => acc + item.cantidad, 0);
   const contador = document.getElementById('contador-carrito');
   if (contador) contador.textContent = total;
+  const floatingCount = document.getElementById('floating-cart-count');
+if (floatingCount) floatingCount.textContent = total;
 }
-
 // ===============================
-// TOAST BOOTSTRAP
+// toast de bootstrap (no esta funcionando uno)
 // ===============================
-
 function mostrarToast(mensaje) {
   const toastEl = document.getElementById('toast-carrito');
   if (!toastEl) return;
@@ -34,11 +30,9 @@ function mostrarToast(mensaje) {
   const toast = new bootstrap.Toast(toastEl);
   toast.show();
 }
-
 // ===============================
 // LOGICA DE BOTONES + Y - (solo contador)
 // ===============================
-
 const qtyButtons = document.querySelectorAll('.qty-btn');
 
 qtyButtons.forEach(button => {
@@ -175,6 +169,7 @@ resetearModal(modalContent);
 const modal = bootstrap.Modal.getInstance(
   document.getElementById('modalEnsalada1')
 );
+
 modal.hide();  
   });
 });
@@ -254,7 +249,14 @@ if (modalEl) {
     // 3️⃣ (opcional ahora) recalcular total correcto
     calcularTotalModal(modalContent);
   });
+  modalEl.addEventListener('hidden.bs.modal', () => {
+    const modalContent = modalEl.querySelector('.modal-content');
+    if (modalContent) {
+      resetearModal(modalContent);
+    }
+  });
 }
+
 
 // ===============================
 // CARGAR CANTIDADES AL INICIAR
