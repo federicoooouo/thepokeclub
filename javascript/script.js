@@ -84,10 +84,18 @@ modalAddButtons.forEach(button => {
   // resetear modal
 resetearModal(modalContent);
 // cerrar modal
-const modal = bootstrap.Modal.getInstance(
-  document.getElementById('modalEnsalada1')
-);
-modal.hide();  
+const modalEl = document.getElementById('modalEnsalada1');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+
+    modalEl.addEventListener(
+      'hidden.bs.modal',
+      () => {
+        mostrarToast('Ensalada agregada al carrito');
+      },
+      { once: true }
+    );
+
+    modal.hide();
   });
 });
 // ===============================
