@@ -1,42 +1,42 @@
 const productos = [
   {
     id: 1,
-    nombre: "Poke Teriyaki Fresh",
+    nombre: "Poke Crunchy",
     precio: 8500,
-    descripcion: "Pollo teriyaki, Arros de sushi, Zanahoria,\nLechuga, Repollo morado,Tomates\ncherrys, Semillas de sesamo",
-    imagen: "./assets/img/salad1.jpg"
+    descripcion: "Pollo crujiente, palta, queso crema, repollo morado, zanahoria, cebolla de verdeo y tomates cherry.",
+    imagen: "./assets/img/pokecrunchy.jpeg"
   },
   {
     id: 2,
-    nombre: "Poke Cream",
+    nombre: "Poke Teriyaki",
     precio: 8500,
-    descripcion: "Pollo grillado, arroz de sushi,\npalta,lechuga, cebolla morada encurtida,\nTomates cherrys, semillas de sesamo.",
-    imagen: "./assets/img/salad2.jpg"
+    descripcion: "Pollo teriyaki, lechuga, repollo morado, tomates cherry, salsa teriyaki y semillas de sésamo.",
+    imagen: "./assets/img/poketeriyaki.jpeg"
   },
   
   {
     id: 3,
-    nombre: "Poke Crunchy",
+    nombre: "Poke Vegetariana",
     precio: 8500,
-    descripcion: "Pollo crujiente, arroz de sushi,\nPalta, Queso crema, repollo morado, zanahoria, cebolla\nde verdeo, tomates cherrys",
-    imagen: "./assets/img/salad2.jpg"
+    descripcion: "Palta, zanahoria, repollo morado, cebolla de verdeo, tomates cherry, choclo y queso crema.",
+    imagen: "./assets/img/pokevegetariana.jpeg"
   },
 
     {
     id: 4,
-    nombre: "Poke Veggie",
-    descripcion: "Arroz de sushi, Palta,Zanahoria,repollo\nmorado, Cebolla de verdo,Tomates\ncherrys, Choclo, Queso crema",
+    nombre: "Poke Vegan",
+    descripcion: "Palta, garbanzos, espinaca, cebolla morada encurtida, rúcula, tomates cherry, repollo morado, zanahoria y semillas de sésamo.",
     precio: 7000,
-    imagen: "./assets/img/salad2.jpg"
+    imagen: "./assets/img/pokevegan.jpeg"
   },
 
 
       {
     id: 5,
-    nombre: "Poke Vegan",
-    descripcion: "Arroz de sushi, Palta,Garbansos,Cebolla\nmorada encurtida,Lechuga, Tomates\nCherrys, Repollo morado.Zanahoria.Semillas\nde sesamo",
+    nombre: "Poke Cream",
+    descripcion: "Pollo grillado, palta, lechuga, cebolla morada encurtida, choclo, queso crema, semillas de sesamo.",
     precio: 7000,
-    imagen: "./assets/img/salad2.jpg"
+    imagen: "./assets/img/pokecream.jpeg"
   },
 
         {
@@ -85,8 +85,8 @@ const productos = [
 
   {
     id: 12,
-    nombre: "Coca Cola comun",
-    descripcion: "Adicional de coca cola comun",
+    nombre: "Coca Cola Común",
+    descripcion: "Adicional de coca cola común",
     precio: 1000,
     imagen: "./assets/img/cocacomun.jpg"
   },
@@ -101,10 +101,10 @@ const productos = [
 
     {
     id: 14,
-    nombre: "Agua mineral",
+    nombre: "Agua Mineral",
     descripcion: "Adicional de agua mineral",
     precio: 1000,
-    imagen: "./assets/img/cocazero.jpg"
+    imagen: "./assets/img/aguamineral.jpeg"
   },
 ];
 
