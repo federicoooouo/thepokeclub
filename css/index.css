@@ -18,6 +18,10 @@
 body {
     font-family: 'Roboto', sans-serif; 
 }
+body {
+  background-color: #f7f7f8;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
@@ -72,6 +76,12 @@ img {
 /*CARRITO*/
 .card {
   border-radius: 30px;
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .btn-primary {
@@ -293,8 +303,12 @@ img {
 
 
 /* el famisisimo footer*/
+/* ===============================
+   FOOTER
+================================ */
+
 .footer {
-  background-color: #1a181819; 
+  background: #1f2933f2;
   color: #ffffff;
   padding: 40px 0;
   font-family: 'Poppins', sans-serif;
@@ -307,31 +321,43 @@ img {
   justify-content: center;
 }
 
+.footer-icon a {
+  text-decoration: none;
+}
+
 .footer-icon i {
-  color: #C40C0C; 
-  transition: transform 0.3s, color 0.3s;
+  color: #C40C0C;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
 }
 
 .footer-icon i:hover {
   transform: translateY(-5px);
-  color: #e2e2e2; 
+  color: #ffffff;
+  opacity: 1;
 }
 
 .footer-icon p {
   font-size: 0.9rem;
-  margin-top: 5px;
+  margin-top: 6px;
   text-align: center;
+  color: #e2e2e2;
 }
 
 .footer hr {
-  margin: 1rem 0;
-  border-color: rgba(255,255,255,0.2);
+  margin: 1.5rem 0;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer small {
   font-size: 0.8rem;
-  color: #C1C1C1;
+  color: #c1c1c1;
 }
+
+/* ===============================
+   RESPONSIVE
+================================ */
 
 @media (max-width: 991px) {
   .footer {
@@ -344,6 +370,7 @@ img {
     font-size: 2rem;
   }
 }
+
 
 /* MOBILE MUY CHICO – FIX CARDS (320px–390px) */
 @media (max-width: 390px) {
